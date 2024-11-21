@@ -1,11 +1,45 @@
 * {
     font-family: sans-serif;
+    margin: 0;
 }
 
+.title {
+    background: rgba( 134, 237, 255);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.4 );
+    backdrop-filter: blur( 17px );
+    -webkit-backdrop-filter: blur( 17px );
+    border-radius: 10px;
+    color: darkgray;
+    padding: 2%;
+}
 .gameboard{
     background-color: red;
 }
 
 footer {
     text-align: center;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 2fr 5fr 2fr 1fr;
+    place-items: center;
+}
+
+.cell {
+    height: 100px;
+    width: 100px;
+    background-color: pink;
+    border: red;
+    color: orange;
+}
+
+.playButton{
+    transition: 0.2s;
+    width: 10%;
+    height: 25%;
+}
+
+.playButton:hover {
+    background-color: rgba( 134, 237, 255, 0.55 );
 }

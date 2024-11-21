@@ -30,7 +30,18 @@ function Gameboard() {
 
 
 function Cell () {
-    // Default value (Nothing)
-    let value = 0
+    let cell = document.createElement('div');
+    cell.textContent = ""; // Nothing by default
+    cell.classList.add("cell");
+    return cell;
 
 }
+
+
+function playGame() {
+    const board = Gameboard();
+    const gameboard = document.querySelector(".gameboard");
+    gameboard.appendChild(board);
+}
+
+playGame();
