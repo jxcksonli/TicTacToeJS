@@ -37,11 +37,19 @@ function Cell () {
 
 }
 
+function isGameOver() {
+    return false;
+}
 
 function playGame() {
     const board = Gameboard();
     const gameboard = document.querySelector(".gameboard");
     gameboard.appendChild(board);
+
+
+    while (isGameOver()){
+        console.log("TEST")
+    }
 }
 
 playGame();
