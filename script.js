@@ -1,12 +1,20 @@
+function Cell () {
+    let cell = document.createElement('div');
+    cell.classList.add("cell");
+    cell.textContent = "test"; // Nothing by default
+
+    return cell;
+}
+
 function Gameboard() {
     const rows = 3;
     const columns = 3;
     const board = [];
 
     // Create 2D array gameboard
-    for (i=0; i<rows; i++){
+    for (i=0; i < rows; i++){
         board[i] = []
-        for (j=0; j<columns; j++){
+        for (j=0; j < columns; j++){
             board[i].push(Cell());
         }
     }
@@ -23,18 +31,14 @@ function Gameboard() {
         const boardWithCellValues = board.map((row) => row.map((cell) => cell.getValue()))
         console.log(boardWithCellValues);
       }
+      
+    const renderBoard = () => {
 
-    return { getBoard, selectCell, printBoard };
-}
+    }
 
+    console.log("GAMEBOARD SET UP COMPLETE")
 
-
-function Cell () {
-    let cell = document.createElement('div');
-    cell.textContent = ""; // Nothing by default
-    cell.classList.add("cell");
-    return cell;
-
+    return { getBoard, selectCell, printBoard, renderBoard };
 }
 
 function isGameOver() {
@@ -43,7 +47,7 @@ function isGameOver() {
 
 function playGame() {
     const board = Gameboard();
-    const gameboard = document.querySelector(".gameboard");
+    const gameboard = document.querySelector('.gameboard');
     gameboard.appendChild(board);
 
 
@@ -52,4 +56,11 @@ function playGame() {
     }
 }
 
-playGame();
+// Start the game
+startButton = document.querySelector('.playButton');
+startButton.addEventListener('click', startGame);
+
+function startGame() {
+    console.log("Game started");
+    playGame();
+}
