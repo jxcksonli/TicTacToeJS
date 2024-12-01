@@ -49,10 +49,12 @@ function playGame() {
     const board = Gameboard();
     const gameboard = document.querySelector('.gameboard');
     gameboard.appendChild(board);
-
+    const whoseTurn = document.querySelector('.whoseturn');
+    whoseTurn.textContent = "Test 1 turn";
 
     while (isGameOver()){
         console.log("TEST")
+        startButton.style.display = "block";
     }
 }
 
@@ -62,5 +64,6 @@ startButton.addEventListener('click', startGame);
 
 function startGame() {
     console.log("Game started");
+    startButton.style.display = "none";
     playGame();
 }
