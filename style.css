@@ -1,6 +1,7 @@
 * {
     font-family: sans-serif;
     margin: 0;
+    background-color: lightgrey;
 }
 
 .title {
@@ -15,7 +16,10 @@
     color: black;
 }
 .gameboard{
-    background-color: red;
+    height: 300px;
+    width: 300px;
+    background-color: beige;
+    border: black 2px solid;
 }
 
 footer {
@@ -25,7 +29,7 @@ footer {
 
 body {
     display: grid;
-    grid-template-rows: 2fr 2fr 5fr 2fr 1fr;
+    grid-template-rows: 2fr 1fr 5fr 2fr 1fr;
     place-items: center;
 }
 
@@ -33,8 +37,7 @@ body {
     height: 100px;
     width: 100px;
     background-color: pink;
-    border: red;
-    color: orange;
+    border: black 1px solid
 }
 
 .playButton{
@@ -44,5 +47,5 @@ body {
 }
 
 .playButton:hover {
-    background-color: rgba( 134, 237, 255, 0.55 );
+    background-color: rgba( 134, 237, 255, 0.3 );
 }
